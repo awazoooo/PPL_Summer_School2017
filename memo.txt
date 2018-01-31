@@ -1,0 +1,68 @@
+#PPLサマースクール(20170918)のメモ
+
+* PureとHOLの2つのロジックがある
+
+* デフォルトの規則(proofハイフンなしの証明)が変わるかもしれないらしい
+
+* sorryでAbort
+
+* by ... は proof ... qedの省略形
+
+* - は何もしない
+
+* proof 1つに qed 1つが対応
+
+* assumes は毎回必要
+
+* find_theorems "pattern" でサーチ
+
+* find_theorems とかは本来サーチ終わったら消してほしいらしい
+
+* by (rule notI) は黒魔術らしい(できたりできなかったり)
+
+* HOLのforallをPureのforallに落として証明
+
+* intro便利
+
+* find_theorems は HOL のレベルにしかマッチしない
+
+* PROPとboolには暗黙の変換がある...(基本的にはboolになる)
+
+* 証明中はdefinitionできない
+
+* = はunfoldingする
+
+* find_theoremsのpatternは "?x = ?x" として同じ変数を表せる
+
+* simp add: my_lemma とすると，hintに追加するみたいな感じになる．
+  (declare my_lemma[simp] としても良い)
+
+* 便利な定理があったら declare thm[intro]とする
+
+* isabelle には int がある
+
+* listのlength以上のアクセスは評価が止まったようになる
+
+* autoを強くしていく
+
+* autoの中身は見れない
+
+* [elim] の結論は，どんなPropにも適用できるようにPとする
+
+* isabelleを賢くしていく手続きが必要らしい
+
+* induct でリストの構造的帰納法
+
+* proof (induct ...) としてしまうと assumes したものが消えてしまうため，usingしておく
+
+* listで証明しづらい時はsetにする
+
+* 型推論できない場合は補完してやる必要がある
+
+* proof (..., auto) とすると，...やってからその全ての場合においてautoする
+
+* nextは打たなくてもいい
+
+* 汚い証明を隠すことができる
+
+結局途中から証明できなくて暇だった...
